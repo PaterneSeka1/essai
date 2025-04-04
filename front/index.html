@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Projet Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 bg-gradient-to-r from-blue-500 to-purple-500">
+
+    <div class="flex items-center justify-center h-screen">
+        <!-- Formulaire de connexion -->
+        <form id="loginForm" class="bg-white p-6 rounded-lg shadow-md w-96 space-y-4">
+            <h2 class="text-2xl font-bold text-center text-gray-700">SE CONNECTER</h2>
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-700">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500" placeholder="Entrez votre nom d'utilisateur">
+            </div>
+            <div class="relative">
+                <label for="password" class="block text-sm font-medium text-gray-700">Mot de passe</label>
+                <input type="password" id="password" name="password" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500" placeholder="Entrez votre mot de passe">
+                <button type="button" id="togglePassword" class="absolute right-4 top-1/2 transform -translate-y-1/2 pt-5">
+                    👁️
+                </button>
+                <small id="passwordError" class="text-red-500 text-sm hidden">Champ requis</small>
+            </div>
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <input type="checkbox" id="rememberMe" name="remember" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                    <label for="remember" class="ml-2 block text-sm text-gray-900">Se souvenir de moi</label>
+                </div>
+                <div class="text-sm">
+                    <a href="#" class="font-medium text-blue-600 hover:text-blue-500">Mot de passe oublié ?</a>
+                </div>
+            </div>  
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200">Se connecter</button>
+            <p class="text-sm text-center text-gray-600">Pas encore inscrit ? <a href="/front/pages/register.html" class="text-blue-600 hover:underline">Inscrivez-vous</a></p>
+        </form>
+        <!-- Fin du formulaire de connexion -->
+    </div>
+
+    <script src="/front/assets/js/script.js"></script>
+</body>
+</html>
